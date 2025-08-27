@@ -21,6 +21,10 @@ provider "azurerm" {
 
 data "azurerm_resource_group" "milestonerg" {
   name     = "rg-milestone-dev-01"
+}
+
+resource "azurerm_resource_group" "testrg01" {
+  name     = "rg-milestone-dev-02"
   location = "westeurope"
 }
 
