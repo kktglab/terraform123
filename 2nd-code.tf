@@ -19,7 +19,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "milestonerg" {
+data "azurerm_resource_group" "milestonerg" {
   name     = "rg-milestone-dev-01"
   location = "westeurope"
 }
