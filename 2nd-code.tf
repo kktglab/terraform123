@@ -19,6 +19,16 @@ provider "azurerm" {
   features {}
 }
 
+variable "storage_account_replication_type" {
+  type = string
+  default = "LRS"  
+}
+variable "storage_account_name" {
+  type = string
+  default = "sakris"
+}
+
+
 data "azurerm_resource_group" "milestonerg" {
   name     = "rg-milestone-dev-01"
 }
@@ -33,7 +43,7 @@ resource "azurerm_storage_account" "samilestone" {
   resource_group_name      = data.azurerm_resource_group.milestonerg.name
   location                 = data.azurerm_resource_group.milestonerg.location
   account_tier             = "Standard"
-  account_replication_type = "GRS"
+  account_replication_type = var.storage_account_replication_type
   tags = {
     environment = "dev"
     createdBy   = "Krzychu"
@@ -41,7 +51,7 @@ resource "azurerm_storage_account" "samilestone" {
 }
 
 resource "azurerm_storage_account" "samilestone2" {
-  name                     = "samilestone002"
+  name                     = lower("${var.storage_account_name}stone01")
   resource_group_name      = data.azurerm_resource_group.milestonerg.name
   location                 = data.azurerm_resource_group.milestonerg.location
   account_tier             = "Standard"
@@ -53,11 +63,11 @@ resource "azurerm_storage_account" "samilestone2" {
 }
 
 resource "azurerm_storage_account" "samilestone3" {
-  name                     = "samilestone003"
+  name                     = lower("${var.storage_account_name}abc01")
   resource_group_name      = data.azurerm_resource_group.milestonerg.name
   location                 = data.azurerm_resource_group.milestonerg.location
   account_tier             = "Standard"
-  account_replication_type = "GRS"
+  account_replication_type = var.storage_account_replication_type
   tags = {
     environment = "stg"
     createdBy   = "Krzychu"
