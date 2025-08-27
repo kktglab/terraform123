@@ -36,7 +36,7 @@ resource "azurerm_storage_account" "samilestone" {
   }
 }
 
-resource "azurerm_storage_account" "samilestone" {
+resource "azurerm_storage_account" "samilestone2" {
   name                     = "samilestone002"
   resource_group_name      = azurerm_resource_group.milestonerg.name
   location                 = azurerm_resource_group.milestonerg.location
