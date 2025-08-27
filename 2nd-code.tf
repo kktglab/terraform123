@@ -15,15 +15,15 @@ terraform {
   }
 }
 
-# provider "azurerm" {
-#   features {}
-#   subscription_id = "761d54cc-a644-4036-a5d4-7db14f4e62d6"
-# }
+provider "azurerm" {
+  features {}
+  subscription_id = "761d54cc-a644-4036-a5d4-7db14f4e62d6"
+}
 
-# resource "azurerm_resource_group" "milestonerg" {
-#   name     = "rg-milestone-dev-01"
-#   location = "westeurope"
-# }
+resource "azurerm_resource_group" "milestonerg" {
+  name     = "rg-milestone-dev-01"
+  location = "westeurope"
+}
 
 # resource "azurerm_storage_account" "samilestone" {
 #   name                     = "samilestone001"
