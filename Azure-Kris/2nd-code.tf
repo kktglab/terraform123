@@ -23,25 +23,31 @@ variable "storage_account_replication_type" {
   type = string
   default = "LRS"  
 }
+
 variable "storage_account_name" {
   type = string
   default = "sakris"
 }
 
+locals {
+  workload_name = "modeldata"
+  environment = "prod"
+  instance = "001"
+}
 
 data "azurerm_resource_group" "milestonerg" {
   name     = "rg-milestone-dev-01"
 }
 
 resource "azurerm_resource_group" "testrg01" {
-  name     = "rg-milestone-dev-02"
+  name     = "rg-${local.workload_name}-${local.environment}-${local.instance}"
   location = "westeurope"
 }
 
 resource "azurerm_storage_account" "samilestone" {
-  name                     = "samilestone001"
-  resource_group_name      = data.azurerm_resource_group.milestonerg.name
-  location                 = data.azurerm_resource_group.milestonerg.location
+  name                     = "sa${local.workload_name}${local.environment}${local.instance}"
+  resource_group_name      = azurerm_resource_group.testrg01.name
+  location                 = azurerm_resource_group.testrg01.location
   account_tier             = "Standard"
   account_replication_type = var.storage_account_replication_type
   tags = {
@@ -72,4 +78,8 @@ resource "azurerm_storage_account" "samilestone3" {
     environment = "stg"
     createdBy   = "Krzychu"
   }
+}
+
+output "storage_account_primary_blob_host" {
+  value = azurerm_storage_account.samilestone.primary_blob_host
 }
