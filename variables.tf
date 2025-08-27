@@ -1,6 +1,6 @@
 variable "environment" {
   type = string
-  default = "prod"
+  default = "stg"
 }
 
 variable "storage_account_replication_type" {
