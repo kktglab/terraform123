@@ -51,3 +51,15 @@ resource "azurerm_storage_account" "samilestone2" {
     createdBy   = "Krzychu"
   }
 }
+
+resource "azurerm_storage_account" "samilestone3" {
+  name                     = "samilestone003"
+  resource_group_name      = data.azurerm_resource_group.milestonerg.name
+  location                 = data.azurerm_resource_group.milestonerg.location
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+  tags = {
+    environment = "stg"
+    createdBy   = "Krzychu"
+  }
+}
