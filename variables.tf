@@ -1,11 +1,11 @@
 variable "environment" {
   type = string
-  default = "stg"
+  default = "prod"
 }
 
 variable "storage_account_replication_type" {
   type = string
-  default = "LRS"  
+  default = "GRS"  
 }
 
 variable "storage_account_name" {
