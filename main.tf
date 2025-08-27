@@ -23,6 +23,10 @@ locals {
   workload_name = "modeldata"
   environment = "prod"
   instance = "001"
+  tags = {
+    "Environment" = var.environment
+    "CreatedBy" = "Krzychu"
+    }
 }
 
 data "azurerm_resource_group" "milestonerg" {
@@ -39,7 +43,7 @@ resource "azurerm_storage_account" "samilestone" {
   resource_group_name      = azurerm_resource_group.testrg01.name
   location                 = azurerm_resource_group.testrg01.location
   account_tier             = "Standard"
-  account_replication_type = var.storage_account_replication_type
+  account_replication_type = "GRS"
   tags = {
     environment = "dev"
     createdBy   = "Krzychu"
@@ -51,11 +55,8 @@ resource "azurerm_storage_account" "samilestone2" {
   resource_group_name      = data.azurerm_resource_group.milestonerg.name
   location                 = data.azurerm_resource_group.milestonerg.location
   account_tier             = "Standard"
-  account_replication_type = "GRS"
-  tags = {
-    environment = "stg"
-    createdBy   = "Krzychu"
-  }
+  account_replication_type = var.storage_account_replication_type
+  tags = local.tags
 }
 
 resource "azurerm_storage_account" "samilestone3" {
@@ -63,9 +64,15 @@ resource "azurerm_storage_account" "samilestone3" {
   resource_group_name      = data.azurerm_resource_group.milestonerg.name
   location                 = data.azurerm_resource_group.milestonerg.location
   account_tier             = "Standard"
-  account_replication_type = var.storage_account_replication_type
-  tags = {
-    environment = "stg"
-    createdBy   = "Krzychu"
-  }
+  account_replication_type = var.environment == "stg" ? "LRS" : var.storage_account_replication_type
+  tags = local.tags
+}
+
+resource "azurerm_storage_account" "samilestone4" {
+  name                     = lower("${var.storage_account_name}abc02")
+  resource_group_name      = data.azurerm_resource_group.milestonerg.name
+  location                 = data.azurerm_resource_group.milestonerg.location
+  account_tier             = "Standard"
+  account_replication_type = var.environment == "stg" ? "LRS" : var.storage_account_replication_type
+  tags = local.tags
 }
