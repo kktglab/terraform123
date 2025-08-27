@@ -10,7 +10,7 @@ terraform {
   cloud {
     organization = "kris-tf-test"
     workspaces {
-      name = "azure-resources"
+      name = "terraform123"
     }
   }
 }
