@@ -30,8 +30,8 @@ resource "azurerm_resource_group" "testrg01" {
 
 resource "azurerm_storage_account" "samilestone" {
   name                     = "samilestone001"
-  resource_group_name      = azurerm_resource_group.milestonerg.name
-  location                 = azurerm_resource_group.milestonerg.location
+  resource_group_name      = data.azurerm_resource_group.milestonerg.name
+  location                 = data.azurerm_resource_group.milestonerg.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
   tags = {
@@ -42,8 +42,8 @@ resource "azurerm_storage_account" "samilestone" {
 
 resource "azurerm_storage_account" "samilestone2" {
   name                     = "samilestone002"
-  resource_group_name      = azurerm_resource_group.milestonerg.name
-  location                 = azurerm_resource_group.milestonerg.location
+  resource_group_name      = data.azurerm_resource_group.milestonerg.name
+  location                 = data.azurerm_resource_group.milestonerg.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
   tags = {
