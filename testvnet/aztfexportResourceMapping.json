@@ -1,0 +1,22 @@
+{
+	"/subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/virtualNetworks/master-vnet": {
+		"resource_id": "/subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/virtualNetworks/master-vnet",
+		"resource_type": "azurerm_virtual_network",
+		"resource_name": "res-19"
+	},
+	"/subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/virtualNetworks/master-vnet/subnets/default": {
+		"resource_id": "/subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/virtualNetworks/master-vnet/subnets/default",
+		"resource_type": "azurerm_subnet",
+		"resource_name": "res-20"
+	},
+	"/subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/virtualNetworks/worker-vnet": {
+		"resource_id": "/subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/virtualNetworks/worker-vnet",
+		"resource_type": "azurerm_virtual_network",
+		"resource_name": "res-21"
+	},
+	"/subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/virtualNetworks/worker-vnet/subnets/default": {
+		"resource_id": "/subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/virtualNetworks/worker-vnet/subnets/default",
+		"resource_type": "azurerm_subnet",
+		"resource_name": "res-22"
+	}
+}

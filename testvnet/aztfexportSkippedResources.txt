@@ -1,0 +1,21 @@
+Following resources are marked to be skipped:
+
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Compute/sshPublicKeys/master_key
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Compute/sshPublicKeys/master_key2
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Compute/sshPublicKeys/worker_key
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Compute/virtualMachines/master
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Compute/virtualMachines/master/extensions/enablevmAccess
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Compute/virtualMachines/worker
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.DevTestLab/schedules/shutdown-computevm-master
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.DevTestLab/schedules/shutdown-computevm-worker
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/networkInterfaces/master469
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/networkInterfaces/master469/networkSecurityGroups/L3N1YnNjcmlwdGlvbnMvNzYxZDU0Y2MtYTY0NC00MDM2LWE1ZDQtN2RiMTRmNGU2MmQ2L3Jlc291cmNlR3JvdXBzL2s4cy9wcm92aWRlcnMvTWljcm9zb2Z0Lk5ldHdvcmsvbmV0d29ya1NlY3VyaXR5R3JvdXBzL21hc3Rlci1uc2c=
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/networkInterfaces/worker49
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/networkInterfaces/worker49/networkSecurityGroups/L3N1YnNjcmlwdGlvbnMvNzYxZDU0Y2MtYTY0NC00MDM2LWE1ZDQtN2RiMTRmNGU2MmQ2L3Jlc291cmNlR3JvdXBzL2s4cy9wcm92aWRlcnMvTWljcm9zb2Z0Lk5ldHdvcmsvbmV0d29ya1NlY3VyaXR5R3JvdXBzL3dvcmtlci1uc2c=
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/networkSecurityGroups/master-nsg
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/networkSecurityGroups/master-nsg/securityRules/SSH
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/networkSecurityGroups/worker-nsg
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/networkSecurityGroups/worker-nsg/securityRules/SSH
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/publicIPAddresses/master-ip
+- /subscriptions/761d54cc-a644-4036-a5d4-7db14f4e62d6/resourceGroups/k8s/providers/Microsoft.Network/publicIPAddresses/worker-ip
